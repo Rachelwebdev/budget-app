@@ -1,2 +1,3 @@
 class BudgetCategory < ApplicationRecord
+    
 end
