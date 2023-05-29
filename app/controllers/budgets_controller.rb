@@ -1,5 +1,6 @@
+# frozen_string_literal: true
 class BudgetsController < ApplicationController
-    before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @budget = current_user.budgets

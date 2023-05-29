@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 class CategoriesController < ApplicationController
-    before_action :authenticate_user!
+  before_action :authenticate_user!
 
-     def index
+  def index
     @categories = current_user.categories
   end
 end

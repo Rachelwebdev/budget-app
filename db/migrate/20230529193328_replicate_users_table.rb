@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ReplicateUsersTable < ActiveRecord::Migration[7.0]
   def change
     create_table :users, force: :cascade do |t|
@@ -13,7 +15,7 @@ class ReplicateUsersTable < ActiveRecord::Migration[7.0]
       t.string :unconfirmed_email
       t.datetime :created_at, null: false
       t.datetime :updated_at, null: false
-    end 
+    end
 
     add_index :users, :email, unique: true
     add_index :users, :reset_password_token, unique: true
