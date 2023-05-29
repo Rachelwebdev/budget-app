@@ -1,2 +1,24 @@
-# budget-app
-Budget App is a mobile web application where the user can manage their budget. Typically, they have a list of transactions associated with a category, so that they can see how much money they spent and on what.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
