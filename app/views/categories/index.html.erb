@@ -5,7 +5,7 @@
   <div class="categories-table">
     <% @categories.each do |category| %>
       <div class="category">
-        <%= image_tag(category.icon) if category.icon.present? %>
+        <%= image_tag @category.photo if category.icon.present? %>
         <h3><%= category.name %></h3>
         <p>Total Amount: <%= category.transactions.sum(:amount) %></p>
       </div>

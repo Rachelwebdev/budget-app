@@ -12,13 +12,13 @@
     <div class="file-field input-field">
       <div class="btn">
         <span>File</span>
-        <%= form.file_field :file %>
+        <%= form.file_field :photo %>
       </div>
       <div class="file-path-wrapper">
-        <%= form.text_field :file, class: "file-path validate" %>
+        <%= form.text_field :photo, class: "file-path validate", placeholder: "Category icon" %>
       </div>
     </div>
-    <div class="actions cate">
+    <div>
     <%= form.submit placeholder: "create category", class: "waves-effect waves-light btn"%>
     </div>
   </div>
