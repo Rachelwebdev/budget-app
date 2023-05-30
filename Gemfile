@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -9,6 +7,11 @@ gem 'dotenv-rails', groups: %i[development test]
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'devise'
+
+gem 'materialize-sass'
+
+gem 'sassc-rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'

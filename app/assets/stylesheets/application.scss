@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'materialize';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.nav-wrapper {
+  background-color: rgb(4, 114, 114);
+}
+
+.categories-table {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 10px;
+}
+
+.categories-table .category {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.categories-table .category img {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.categories-table .category h3 {
+  margin: 0;
+}
+
+.categories-table .category p {
+  margin: 0;
+}

@@ -1,0 +1,17 @@
+
+<div class='form up'>
+<h2 class="exc"> Create your category </h2>
+<%= form_with model:@category, url: categories_path do |form| %>
+  <div class="input">
+    <%= form.label :name %>
+    <%= form.text_field :name, placeholder: "category name...", required: true%>
+  </div>
+  <div class="input">
+    <%= form.label :icon %>
+    <%= form.file_field :icon %>
+  </div>
+  <div class="actions cate">
+   <%= form.submit placeholder: "create category"%>
+  </div>
+<%end%>
+</div>
