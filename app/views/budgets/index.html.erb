@@ -1,3 +1,5 @@
+<%= render partial: "shared/navbar"%>
+
 <% if user_signed_in? %>
   <p>Welcome to Budgets<%= current_user.name %></p>
   <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>

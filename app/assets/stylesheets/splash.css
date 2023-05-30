@@ -1,10 +1,14 @@
 .app-name {
-  color: red;
+  color: rgb(4, 114, 114);
 }
 
 .splash-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.log-btns {
+  margin-top: 15rem;
 }

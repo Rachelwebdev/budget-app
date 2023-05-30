@@ -4,7 +4,7 @@ module Users
     # before_action :configure_sign_in_params, only: [:create]
 
     def after_sign_in_path_for(_resource)
-      budgets_path
+      categories_path
     end
 
     # GET /resource/sign_in
@@ -14,9 +14,7 @@ module Users
 
     # POST /resource/sign_in
     def create
-      super do |user|
-        redirect_to budgets_path if user.persisted?
-      end
+      super 
     end
 
     # DELETE /resource/sign_out

@@ -1,2 +1,16 @@
-<h1>Pages#splash</h1>
-<p>Find me in app/views/pages/splash.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budget App - Splash</title>
+</head>
+<body> 
+<%= render partial: "shared/navbar"%>
+<div class='splash-container'>
+  <h1 class="app-name">BudgetBuddy</h1>  
+  <p class='log-btns'>
+    <%= link_to "Sign up", new_user_registration_path, class: "waves-effect waves-light btn" %>
+    <%= link_to "Log in", new_user_session_path, class: "waves-effect waves-light btn" %>    
+  </p>
+</div>  
+</body>
+</html>

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 class PagesController < ApplicationController
-  def splash
-    render layout: 'splash'
+  def splash   
   end
 end
