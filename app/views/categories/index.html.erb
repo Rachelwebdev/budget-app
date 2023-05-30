@@ -10,10 +10,9 @@
         <p>Total Amount: <%= category.transactions.sum(:amount) %></p>
       </div>
     <% end %>
-</div>
-  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+</div>  
 <% else %>
   <%= link_to 'Sign in', new_user_session_path %>
 <% end %>
 
-<%= link_to "Add Category", new_category_path %>
+<%= link_to "Add Category", new_category_path, class: "waves-effect waves-light btn" %>
