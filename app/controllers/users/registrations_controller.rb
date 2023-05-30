@@ -5,7 +5,6 @@ module Users
 
     # GET /resource/sign_up
 
-
     # POST /resource
     def create
       super do |resource|
