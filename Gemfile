@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -13,7 +11,7 @@ gem 'devise'
 
 gem 'materialize-sass'
 
-gem "sassc-rails"
+gem 'sassc-rails'
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

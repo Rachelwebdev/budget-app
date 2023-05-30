@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This migration creates the ReplicateUsersTable table
 class ReplicateUsersTable < ActiveRecord::Migration[7.0]
   def change
     create_table :users, force: :cascade do |t|

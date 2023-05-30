@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
 
@@ -7,12 +6,10 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @categories = Category.find(params [:id])
+    @categories = Category.find(params([:id]))
   end
 
   def new
     @categories = Category.new
   end
-  
-  
 end
