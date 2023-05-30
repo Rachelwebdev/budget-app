@@ -13,7 +13,6 @@ module Users
 
     # POST /resource/sign_in
 
-
     # DELETE /resource/sign_out
     # def destroy
     #   super
