@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# This migration creates the budget_categories table
 class CreateBudgetCategories < ActiveRecord::Migration[7.0]
   def change
     create_table :budget_categories do |t|

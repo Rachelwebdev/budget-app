@@ -1,17 +1,20 @@
+<%= render partial: "shared/navbar"%>
 
 <div class='form up'>
-<h2 class="exc"> Create your category </h2>
+<h3 class="cat-header"> Add New Category </h3>
 <%= form_with model:@category, url: categories_path do |form| %>
-  <div class="input">
-    <%= form.label :name %>
-    <%= form.text_field :name, placeholder: "category name...", required: true%>
-  </div>
-  <div class="input">
-    <%= form.label :icon %>
-    <%= form.file_field :icon %>
-  </div>
-  <div class="actions cate">
-   <%= form.submit placeholder: "create category"%>
+<div class='form-inputs'>
+    <div class="input-field col s6">
+      <%= form.text_field :name, class: "validate", id: "name" %>
+      <%= form.label :name %>
+    </div>
+    <div class="form_field">
+      <%= form.file_field :icon, id: "category_photo_input", class: "waves-effect waves-light btn" %>
+    </div>
+    <div id="category_photo_preview"></div> 
+    <div>
+      <%= form.submit placeholder: "create category", class: "waves-effect waves-light btn"%>
+    </div>
   </div>
 <%end%>
 </div>

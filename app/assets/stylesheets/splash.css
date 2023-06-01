@@ -10,5 +10,13 @@
 }
 
 .log-btns {
+  display: flex;
+  flex-direction: column;
   margin-top: 15rem;
+}
+
+.sign {
+  padding-bottom: 1rem;
+  width: 100%;
+  background-color: rgb(4, 114, 114);
 }

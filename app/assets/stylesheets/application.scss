@@ -23,6 +23,26 @@
   text-decoration: none;
 }
 
+.login_headers,
+.cat-header {
+  text-align: center;
+  color: rgb(4, 114, 114);
+}
+
+.form_container,
+.form-inputs {
+  padding: 0 2rem;
+}
+
+.form_field {
+  margin: 2rem 0;
+}
+
+.btn {
+  color: #fff;
+  cursor: pointer;
+}
+
 .nav-wrapper {
   background-color: rgb(4, 114, 114);
 }
