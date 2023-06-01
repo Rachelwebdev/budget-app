@@ -1,7 +1,7 @@
-<%= render partial: "shared/navbar"%>
+<%= render partial: "shared/navbar", locals: {logo: "New Budget", model: category_path(@category.id)}%>
 
 <div class = "form up">
-<%=form_with model:@budget, url: category_budgets_path(@category.id) do |f|%>
+<%=form_with model:@budget, url: category_budgets_path(@category.id, cat: @category.id) do |f|%>
   <h2 class="exc"> create Transaction</h2>
   <div class="input">
     <%=f.label :name%>

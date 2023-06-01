@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @categories = Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def new
@@ -29,6 +29,8 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    params.require(:category).permit(:icon, :name)
+    nameCase =  params.require(:category).permit(:icon, :name)
+    nameCase[:name] = nameCase[:name].downcase
+    nameCase
   end
 end

@@ -1,6 +1,5 @@
-<nav class="nav">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Logo</a>
-      <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
-    </div>
-</nav>
+<div class="nav-wrapper">
+      <%= link_to "<", model, class: "back-btn" %>
+      <a href="#" class="brand-logo center"><%= logo %></a>
+      <%= button_to 'Sign out', destroy_user_session_path, method: :delete, class: "signout-btn" %>
+</div>
