@@ -29,8 +29,8 @@ class CategoriesController < ApplicationController
   private
 
   def category_params
-    nameCase =  params.require(:category).permit(:icon, :name)
-    nameCase[:name] = nameCase[:name].downcase
-    nameCase
+    name_case = params.require(:category).permit(:icon, :name)
+    name_case[:name] = name_case[:name].downcase
+    name_case
   end
 end

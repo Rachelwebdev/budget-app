@@ -1,7 +1,7 @@
 class BudgetsController < ApplicationController
   before_action :authenticate_user!
-  
-   def new
+
+  def new
     @category = Category.find(params[:cat])
     @budget = Budget.new
   end
@@ -23,11 +23,10 @@ class BudgetsController < ApplicationController
     end
   end
 
-  
+
   private
 
   def transaction
     params.require(:budget).permit(:name, :amount)
-  end  
-
+  end
 end
