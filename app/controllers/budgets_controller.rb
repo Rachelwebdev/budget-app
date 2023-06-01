@@ -23,7 +23,6 @@ class BudgetsController < ApplicationController
     end
   end
 
-
   private
 
   def transaction
