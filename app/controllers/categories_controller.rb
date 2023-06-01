@@ -13,20 +13,21 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
-  def create 
+  def create
     @category = Category.new(category_params)
     @category.author_id = current_user.id
 
     if @category.save
-      flash[:success] = "Category successfully created"
+      flash[:success] = 'Category successfully created'
       redirect_to categories_path
     else
-      flash[:error] = "Something went wrong"
+      flash[:error] = 'Something went wrong'
       render 'new'
     end
   end
-  
-private
+
+  private
+
   def category_params
     params.require(:category).permit(:icon, :name)
   end
