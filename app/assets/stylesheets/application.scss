@@ -44,13 +44,12 @@
 }
 
 .nav-wrapper {
-  background-color: rgb(4, 114, 114);
+  background-color: #3778c2;
 }
 
 .categories-table {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  grid-gap: 10px;
+  background-color: #eee7e7;
+  height: calc(100vh - 56px);
 }
 
 .categories-table .category {

@@ -1,22 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Barlow:wght@200;300;400;500&family=Lobster+Two:ital@1&family=Manrope:wght@200;300;400;500;600;700&family=Pacifico&family=Poppins:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .app-name {
-  color: rgb(4, 114, 114);
+  color: #2c2a2a;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 4rem;
+  transform: translate(-50%, -50%);
+  font-family: 'Lobster Two', cursive;
 }
 
 .splash-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  height: calc(100vh - 56px);
+  position: relative;
 }
 
 .log-btns {
   display: flex;
   flex-direction: column;
-  margin-top: 15rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .sign {
-  padding-bottom: 1rem;
-  width: 100%;
-  background-color: rgb(4, 114, 114);
+  width: 95%;
+  margin: 10px auto;
+  color: #2c2a2a;
+  padding: 10px;
+  text-align: center;
+  outline: none;
+  font-size: 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+.sign:focus {
+  background-color: #3778c2;
+  color: #fff;
 }

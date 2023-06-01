@@ -4,12 +4,11 @@
   <title>Budget App - Splash</title>
 </head>
 <body> 
-<%= render partial: "shared/navbar"%>
 <div class='splash-container'>
-  <h1 class="app-name">BudgetBuddy</h1>  
+  <h3 class="app-name">BudgetBuddy</h3>  
   <p class='log-btns'>
-    <%= link_to "Sign up", new_user_registration_path, class: "waves-effect waves-light btn sign-in" %>
-    <%= link_to "Log in", new_user_session_path, class: "waves-effect waves-light btn sign-out" %>    
+    <%= link_to "Log in", new_user_session_path, autofocus: true, class: "waves-effect waves-light sign" %>    
+    <%= link_to "Sign up", new_user_registration_path, class: "waves-effect waves-light sign" %>
   </p>
 </div>  
 </body>

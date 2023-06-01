@@ -1,8 +1,6 @@
-<nav>
+<nav class="nav">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Logo</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-      </ul>
+      <%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
     </div>
 </nav>
