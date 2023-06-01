@@ -1,0 +1,22 @@
+<%= render partial: "shared/navbar"%>
+
+<div class = "form up">
+<%=form_with model:@budget, url: category_budgets_path(@category.id) do |f|%>
+  <h2 class="exc"> create Transaction</h2>
+  <div class="input">
+    <%=f.label :name%>
+    <%=f.text_field :name, placeholder: "transaction name", required:true %>
+  </div>
+  <div class="input">
+    <%=f.label :amount%>
+    <%=f.text_field :amount, placeholder: "amount", required:true %>
+  </div>
+   <div class="input">
+    <%=f.label :category%>
+    <%=f.text_field :category, placeholder: "category", required:true %>
+  </div>
+  <div class="actions ex">
+    <%=f.submit "create transaction", disable_with: 'create transactioning...'%>
+  </div>
+<%end%>
+</div>

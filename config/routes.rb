@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'pages#splash'
-  resources :users, only: %i[index show]
-  resources :categories, only: %i[index show new create destroy]
-  resources :budgets, only: %i[index show new create destroy]
+  resources :users
+  resources :categories do
+    resources :budgets
+  end
 end

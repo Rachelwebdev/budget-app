@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :budgets
   has_many :categories
+
+  validates :name, presence: true, length: { maximum: 255 }
 end
