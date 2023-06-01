@@ -1,17 +1,19 @@
-<%= render partial: "shared/navbar"%>
+<%= render partial: "shared/navbar", locals: {logo: "Category", model: categories_path} %>
 
-<% if user_signed_in? %>
-  <p>Welcome to Categories <%= current_user.name %></p>
   <div class="categories-table">
     <% @categories.each do |category| %>
       <div class="category">
-        <%= image_tag category.icon if category.icon.attached? %>
-        <%= link_to category.name, category_path(category.id) %>       
+        <div class="img-name">        
+          <div class="category-img">        
+            <%= image_tag category.icon if category.icon.attached? %>
+          </div>
+          <%= link_to category.name, category_path(category.id), class: "category-name" %>       
+        </div>
+        <p class="category-name">$<%= category.budgets.sum(:amount) %> </p>       
       </div>
     <% end %>
+    <div class="category-btn-cont">      
+    <%= link_to "ADD CATEGORY", new_category_path, class: "add-cat-btn" %>
+    </div>
 </div>  
-<% else %>
-  <%= link_to 'Sign in', new_user_session_path %>
-<% end %>
-<%= button_to 'Sign out', destroy_user_session_path, method: :delete %>
-<%= link_to "Add Category", new_category_path, class: "waves-effect waves-light btn" %>
+

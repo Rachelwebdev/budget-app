@@ -1,1 +1,14 @@
-<%= link_to "Add New Transaction", new_category_budget_path(@categories.id, cat: @categories.id) %>
+<%= render partial: "shared/navbar", locals: {logo: "$#{@category.budgets.sum(:amount)}", model: categories_path }%>
+
+  <div class="categories-table">
+    <% @category.budgets.each do |budget| %>
+      <div class="category">     
+        <p class="category-name"><%= budget.name %> </p>       
+        <p class="category-name">$<%= budget.amount %> </p>       
+      </div>
+    <% end %>
+    <div class="category-btn-cont">      
+        <%= link_to "Add New Transaction", new_category_budget_path(@category.id, cat: @category.id), class: "add-cat-btn" %>
+    </div>
+</div>  
+
