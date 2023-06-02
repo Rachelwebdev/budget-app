@@ -4,5 +4,6 @@ class Category < ApplicationRecord
   has_many :budgets, through: :budget_categories
   has_one_attached :icon
 
-  validates :name, presence: true, length: { maximum: 255 }
+  validates :name, presence: true, length: { minimum: 5 }
+  validates :icon, presence: true
 end
