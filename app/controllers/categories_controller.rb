@@ -18,7 +18,7 @@ class CategoriesController < ApplicationController
     @category.author_id = current_user.id
 
     if @category.save
-      flash[:success] = 'Category successfully created'
+      flash[:success] = 'A New Category successfully created'
       redirect_to categories_path
     else
       flash[:error] = 'Something went wrong'
