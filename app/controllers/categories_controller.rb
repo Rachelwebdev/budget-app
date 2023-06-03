@@ -22,6 +22,7 @@ class CategoriesController < ApplicationController
       redirect_to categories_path
     else
       flash[:error] = 'Something went wrong'
+      puts @category.errors.full_messages
       render 'new'
     end
   end
