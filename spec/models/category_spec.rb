@@ -18,7 +18,6 @@ RSpec.describe Category, type: :model do
       expect(@category).to_not be_valid
     end
 
-
     it 'should have an icon' do
       expect(@category.icon).to be_valid
     end
@@ -27,8 +26,6 @@ RSpec.describe Category, type: :model do
       @category.icon = nil
       expect(@category).to_not be_valid
     end
-
-
 
     it 'should have a minimum of 3 characters' do
       expect(@category).to be_valid
