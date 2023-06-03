@@ -3,17 +3,19 @@
 <div class='form up'>
 <h3 class="cat-header"> Add New Category </h3>
 <%= form_with model:@category, url: categories_path do |form| %>
-<div class='form-inputs'>
-    <div class="input-field col s6">
-      <%= form.text_field :name, class: "validate", id: "name" %>
-      <%= form.label :name %>
-    </div>
+<div class='form-inputs'>   
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="category_name" type="text" value="" class="validate" name="category[name]" placeholder="Name" required autofocus>
+        <label for="category_name"></label>
+      </div>
+</div>
     <div class="form_field">
       <%= form.file_field :icon, id: "category_photo_input", class: "waves-effect waves-light btn" %>
     </div>
     <div id="category_photo_preview"></div> 
     <div>
-      <%= form.submit placeholder: "create category", class: "waves-effect waves-light btn"%>
+      <%= form.submit placeholder: "create category", class: "waves-effect waves-light btn, add-cat-btn"%>
     </div>
   </div>
 <%end%>

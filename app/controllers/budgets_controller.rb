@@ -8,7 +8,7 @@ class BudgetsController < ApplicationController
 
   def create
     @original = Category.find(params[:cat])
-    @cate = Category.where(name: params[:budget][:category].downcase, author_id: current_user).first
+    @cate = Category.where(name: params[:budget][:category].downcase, author_id: current_user.id).first
     @transaction = Budget.new(transaction)
     @transaction.author_id = current_user.id
     if @cate.nil?
@@ -17,9 +17,12 @@ class BudgetsController < ApplicationController
       redirect_to categories_path
     else
       @transaction.save
-      redirect_to category_path(@cate.id)
+      p @transaction
+      p @cate
       @complete = BudgetCategory.new(budget_id: @transaction.id, category_id: @cate.id)
+      p @complete.errors.full_messages
       @complete.save
+      redirect_to category_path(@cate.id)
     end
   end
 

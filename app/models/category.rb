@@ -5,4 +5,5 @@ class Category < ApplicationRecord
   has_one_attached :icon
 
   validates :name, presence: true, length: { maximum: 255 }
+  validates :icon, presence: true
 end

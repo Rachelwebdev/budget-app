@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_01_093420) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_03_101653) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,8 +43,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_093420) do
   end
 
   create_table "budget_categories", force: :cascade do |t|
-    t.bigint "budget_id", null: false
-    t.bigint "category_id", null: false
+    t.bigint "budget_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["budget_id"], name: "index_budget_categories_on_budget_id"
@@ -76,6 +76,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_093420) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "unconfirmed_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
@@ -84,7 +88,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_093420) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "budget_categories", "budgets", column: "category_id"
-  add_foreign_key "budget_categories", "categories", column: "budget_id"
+  add_foreign_key "budget_categories", "budgets"
+  add_foreign_key "budget_categories", "categories"
   add_foreign_key "categories", "users", column: "author_id"
 end
